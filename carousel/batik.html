@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <button
+        type="button"
+        class="btn top-btn"
+        data-bs-toggle="modal"
+        data-bs-target="#menuModal"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <p>Jember Keren</p>
+    </nav>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="menuModal"
+      style="
+        background-color: transparent;
+        height: fit-content;
+        margin-top: 3rem;
+      "
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="searchModalLabel">Navigasi</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <ul class="list-group">
+              <li class="list-group-item active">Kembali</li>
+              <a href="../index.html">
+                <li class="list-group-item">Kembali Ke Beranda</li>
+              </a>
+              <br />
+              <li class="list-group-item active">Konten Lainnya</li>
+              <a href="jfc.html">
+                <li class="list-group-item">JFC (Jember Fashion Carnaval)</li>
+              </a>
+              <a href="papuma.html">
+                <li class="list-group-item">Pantai Papuma</li>
+              </a>
+              <a href="suwar-suwir.html">
+                <li class="list-group-item">Suwar Suwir</li>
+              </a>
+              <a href="lahbako.html">
+                <li class="list-group-item">Tari Lahbako</li>
+              </a>
+              <a href="batik.html">
+                <li class="list-group-item">Batik Jember</li>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <section class="content">
+      <img src="../images/batik.jpg" alt="" />
+      <div class="teks">
+        <h1>Batik Jember</h1>
+        <p>
+          Batik Jember adalah salah satu jenis batik tulis yang berasal dari
+          Kabupaten Jember, Provinsi Jawa Timur. Batik ini terkenal dengan motif
+          daun tembakau yang memiliki makna filosofis yang mendalam. Motif daun
+          tembakau secara filosofis menggambarkan daerah Jember sebagai
+          penghasil tembakau terbesar di Indonesia. Selain motif daun tembakau,
+          batik Jember juga menampilkan motif Pasadeng yang asal usulnya dari
+          sejarah kerajaan kecil di Desa Sadeng, Jember dengan kehidupan rakyat
+          yang makmur.
+
+          <br /><br />
+          Sejarah batik di Jember telah melewati masa lampau ketika kegiatan
+          membatik sempat mati suri selama jaman Belanda. Namun, pada tahun
+          2010, para pengrajin batik tulis di Rumah Batik Rolla berhasil
+          menghidupkan kembali motif-motif tradisional Jember menjadi batik
+          tulis modern. Nama Batik Jember ditujukan untuk membumikan Jember
+          sebagai suatu daerah sentra baru penghasil batik tulis di Jawa Timur,
+          selain yang telah dikenal sebagai daerah penghasil tembakau terkemuka.
+
+          <br /><br />
+          Batik Jember memiliki ciri khas yang unik dibandingkan dengan jenis
+          batik lainnya. Motif khas Jember lebih mengarah ke motif yang lebih
+          bebas dan kontemporer. Umumnya, batik daerah ini memiliki corak khas,
+          yaitu daun tembakau. Selain motif daun tembakau, batik Jember juga
+          menampilkan motif lain seperti kopi, kakao, buah naga, bambu,
+          kupu-kupu, dan burung, yang semuanya merupakan inspirasi dari potensi
+          sumber daya alam di Jember. Hal ini membuat batik Jember tidak hanya
+          sekedar hiasan, tetapi juga cerminan kekayaan alam dan budaya daerah.
+        </p>
+        <h1 class="teks-terkait">Foto terkait</h1>
+        <div class="terkait">
+          <img src="../images-terkait/batik/batik.jpg" alt="batik1" />
+          <img src="../images-terkait/batik/batik2.jpg" alt="batik2" />
+          <img src="../images-terkait/batik/batik3.jpg" alt="batik3" />
+        </div>
+      </div>
+    </section>
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+  </body>
+</html>

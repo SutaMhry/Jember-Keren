@@ -1,0 +1,699 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: black;
+}
+
+
+/* Navbar */
+nav {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+nav p {
+  font-family: "Kaushan Script", cursive;
+  list-style: none;
+  color: white;
+  font-size: 2rem;
+  margin: 0;
+}
+
+nav .top-btn {
+  color: white;
+  background-color: transparent;
+  border: none;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+}
+
+nav .top-btn i {
+  display: flex;
+  align-items: center;
+}
+
+nav p:nth-of-type(1) {
+  flex-grow: 1;
+  text-align: center;
+}
+
+nav p:nth-of-type(2) {
+  margin-left: auto;
+}
+
+
+
+.heading {
+  font-size: 4.5rem;
+  font-family: "Kaushan Script", cursive;
+}
+
+/* Carousel */
+.main {
+  height: 100vh;
+  width: 100%;
+}
+.wrapper,
+.slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.slide {
+  overflow: hidden;
+}
+.slide::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+.slide .image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.slide .image-data {
+  position: absolute; /* Memungkinkan penempatan yang tepat dalam slide */
+  top: 50%; /* Mengatur posisi vertikal di tengah */
+  left: 50%; /* Mengatur posisi horizontal di tengah */
+  transform: translate(-50%, -50%); /* Memindahkan elemen agar benar-benar berada di tengah */
+  text-align: center; /* Memusatkan teks */
+  width: 100%; /* Lebar penuh untuk responsivitas */
+  z-index: 100; /* Menetapkan urutan tumpukan agar berada di atas elemen lain */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Menambahkan bayangan pada teks */
+}
+.image-data span.text {
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  display: block; /* Pastikan teks tampil sebagai blok */
+  margin-bottom: 10px; /* Menambah jarak di bawah span */
+}
+
+a.button {
+  display: inline-block; /* Bisa tetap inline-block untuk ukuran tombol */
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: #333;
+  background: #fff;
+  text-decoration: none;
+  margin-top: 0; /* Pastikan margin top diatur ke 0 */
+  transition: all 0.3s ease;
+}
+
+.image-data h2 {
+  max-width: 40rem;
+  font-size: 45px;
+  font-weight: 600;
+  color: #ffea00;
+  white-space: nowrap;
+  text-align: center;
+  margin: 0 auto;
+}
+
+a.button:hover {
+  color: #fff;
+  background-color: #c87e4f;
+}
+/* swiper button css */
+.nav-btn {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+}
+.nav-btn:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+.swiper-button-next {
+  right: 50px;
+}
+.swiper-button-prev {
+  left: 50px;
+}
+.nav-btn::before,
+.nav-btn::after {
+  font-size: 25px;
+  color: #fff;
+}
+.swiper-pagination-bullet {
+  opacity: 1;
+  height: 12px;
+  width: 12px;
+  background-color: #fff;
+  visibility: hidden;
+}
+.swiper-pagination-bullet-active {
+  border: 2px solid #fff;
+  background-color: #c87e4f;
+}
+
+/* Default (desktop and larger screens) */
+/* .aboutus {
+  padding: 2rem;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between; 
+}
+
+.aboutus-image {
+  width: 40%; 
+  background-color: red;
+  border-radius: 10px;
+  margin: 0;
+  padding: 0; 
+}
+
+.aboutus-teks {
+  width: 55%; 
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+} */
+
+
+.aboutus {
+  padding: 2rem;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.aboutus-images {
+  display: flex; /* Menggunakan flexbox untuk mengatur posisi gambar */
+  align-items: center;
+  width: 25rem; /* Lebar dari aboutus-images */
+  height: 22.5rem; /* Tinggi dari aboutus-images */
+  position: relative; /* Untuk posisi gambar tambahan */
+  margin: 0 auto; /* Pusatkan div gambar */
+}
+
+.papuma-img {
+  width: 100%; /* Gambar utama menggunakan lebar penuh dari aboutus-image */
+  height: auto; /* Sesuaikan tinggi otomatis */
+  border-radius: 10px; /* Sudut membulat */
+}
+
+.jfc-left {
+  position: absolute; /* Gambar kiri diposisikan secara absolut */
+  top: 0; /* Atur posisi ke atas */
+  left: -5rem; /* Atur posisi ke kiri, 50% keluar dari gambar utama */
+  width: 50%; /* Ukuran gambar kiri disesuaikan */
+  height: auto; /* Sesuaikan tinggi otomatis */
+  border-radius: 10px; /* Sudut membulat */
+}
+
+.jfc-right {
+  position: absolute; /* Gambar kanan diposisikan secara absolut */
+  bottom: 0; /* Atur posisi ke bawah */
+  right: -5rem; /* Atur posisi ke kanan, 50% keluar dari gambar utama */
+  width: 50%; /* Ukuran gambar kanan disesuaikan */
+  height: auto; /* Sesuaikan tinggi otomatis */
+  border-radius: 10px; /* Sudut membulat */
+}
+
+.aboutus-teks {
+  width: 50%; /* Atur lebar teks */
+  margin: 0;
+  padding: 0;
+  text-align: justify; 
+}
+
+
+
+
+
+
+/* Timeline */
+.timeline-section {
+  min-height: 100vh;
+  padding: 100px 15px;
+  margin-top: -5rem;
+}
+
+.timeline-section .heading {
+  background-color: dark; /* Ganti dengan warna yang sesuai */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.timeline-section .heading hr {
+  width: 100%; /* Menggunakan persentase untuk responsivitas */
+  max-width: 20rem; /* Batas maksimum lebar */
+  margin-top: -4rem; /* Margin negatif untuk mengatur posisi */
+  border: 1px solid white; /* Anda bisa menyesuaikan border sesuai kebutuhan */
+}
+
+.timeline-items {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin-top: 5rem;
+
+}
+
+/* .timeline-items::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  margin-top: 1.2rem;
+  height: 89.5rem;
+  background-color: rgba(47, 54, 62, 1);
+  background-color: yellow;
+  left: -1px;
+} */
+
+.timeline-items::before {
+  content: "";
+  position: absolute;
+  width: 2px; /* Lebar garis */
+  height: calc(100% - 14rem); /* Mengatur tinggi garis agar berhenti di dot */
+  background-color: rgba(47, 54, 62, 1); /* Warna garis */
+  left: -1px; /* Posisi horizontal */
+  top: 6px; /* Atur posisi vertikal untuk menyesuaikan dengan dot */
+}
+
+.timeline-item {
+  margin-bottom: 40px;
+  width: 100%;
+  position: relative;
+  padding-left: 50px;
+  text-align: left;
+}
+
+.timeline-dot {
+  height: 16px;
+  width: 16px;
+  background-color: rgba(234, 160, 35, 0.5);
+  /* Warna dot redup */
+  position: absolute;
+  left: -8px;
+  /* Dot di kiri */
+  border-radius: 50%;
+  top: 10px;
+  transition: background-color 0.3s ease;
+  /* Transisi untuk warna dot */
+}
+
+.timeline-date {
+  font-size: 18px;
+  color: rgba(234, 160, 35, 0.5);
+  /* Warna teks redup */
+  margin: 6px 0 15px;
+}
+
+.timeline-content {
+  background-color: #2f363e;
+  padding: 30px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* Transisi untuk warna */
+}
+
+.timeline-content h3 {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  /* Warna teks redup */
+  margin: 0 0 10px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.timeline-content p {
+  color: rgba(200, 200, 200, 0.5);
+  /* Warna teks redup */
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+}
+
+.highlight {
+  background-color: #4e555d;
+  /* Ganti dengan warna yang diinginkan */
+  color: #ffffff;
+  /* Warna teks menyala */
+}
+
+#container {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+#slider-container {
+  height: 300px;
+  width: 85vw;
+  max-width: 1400px;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+#slider-container .btn {
+  position: absolute;
+  top: calc(50% - 30px);
+  height: 15px;
+  width: 15px;
+  border-left: 8px solid #696969;
+  border-top: 8px solid #696969;
+  cursor: pointer;
+}
+#slider-container .btn:hover {
+  transform: scale(1.2);
+}
+#slider-container .btn.inactive {
+  border-color: #282828;
+}
+#slider-container .btn:first-of-type {
+  transform: rotate(-45deg);
+  left: 10px;
+}
+#slider-container .btn:last-of-type {
+  transform: rotate(135deg);
+  right: 10px;
+}
+#slider-container #slider {
+  display: flex;
+  width: 1000%;
+  height: 100%;
+  transition: all 0.5s;
+}
+#slider-container #slider .slide {
+  height: 90%;
+  margin: auto 10px;
+  background-color: #b5b5b5;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px 2px white, -2px -2px 4px 2px white;
+  display: grid;
+  place-items: center;
+}
+#slider-container #slider .slide span {
+  color: white;
+  font-size: 60px;
+}
+
+@media only screen and (min-width: 1100px) {
+  #slider-container #slider .slide {
+    width: calc(2.5% - 20px);
+  }
+}
+@media only screen and (max-width: 1100px) {
+  #slider-container #slider .slide {
+    width: calc(3.3333333% - 20px);
+  }
+}
+@media only screen and (max-width: 900px) {
+  #slider-container #slider .slide {
+    width: calc(5% - 20px);
+  }
+}
+@media only screen and (max-width: 550px) {
+  #slider-container #slider .slide {
+    width: calc(10% - 20px);
+  }
+}
+
+
+.footer {
+  background-color: black;
+  color: white;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start; /* Meratakan konten ke atas */
+  flex-wrap: wrap; /* Agar konten footer bisa melipat di layar kecil */
+}
+
+.footer h1 {
+  font-family: "Kaushan Script", cursive;
+  font-size: 3rem;
+  margin-bottom: 0.5rem; /* Mengurangi jarak bawah */
+}
+
+.footer-content ul {
+  list-style-type: none; /* Menghapus bullet list */
+  padding: 0;
+  margin: 0;
+}
+
+.footer-content ul li {
+  margin-bottom: 0.5rem; /* Memberi jarak antar item */
+}
+
+.footer-content ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-content ul li a:hover {
+  color: #ffea00; /* Warna hover */
+}
+
+.footer-logo h1 {
+  margin-bottom: 0.5rem;
+}
+
+.footer-content {
+  flex-direction: column;
+  margin-bottom: 1rem; /* Tambahkan margin bawah untuk setiap content */
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.social-media a {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.social-media a:hover {
+  color: #ffea00;
+}
+
+
+
+
+/* Responsive */
+
+@media (max-width: 1101px) {
+  .image-data h2 {
+    font-size: 40px;
+  }
+  .heading {
+    font-size: 4rem; /* Ukuran heading untuk layar sedang */
+    margin-bottom: 2rem;
+  }
+
+  .timeline-senction hr {
+    width: 10rem;
+  }
+
+  .timeline-items::before {
+    content: "";
+    left: 7px; /* Posisi horizontal garis */
+    height: calc(100% - 15rem); /* Mengatur tinggi garis agar berhenti di dot */
+  }
+
+  .timeline-dot {
+    left: 0; /* Posisi dot */
+  }
+}
+
+@media (max-width: 901px) {
+  .image-data h2 {
+    font-size: 35px;
+  }
+  .timeline-section .heading {
+    font-size: 3.5rem; /* Ukuran font heading untuk layar kecil */
+    margin-bottom: 2rem;
+  }
+
+  .timeline-senction hr {
+    font-size: 2.5rem; /* Ukuran font heading lebih kecil untuk layar kecil */
+    margin-bottom: 3rem;
+  }
+
+  .timeline-items::before {
+    content: "";
+    left: 7px; /* Posisi horizontal garis */
+    height: calc(100% - 15rem); /* Mengatur tinggi garis agar berhenti di dot */
+  }
+
+  .aboutus-teks {
+    width: 100%; /* Lebar penuh untuk teks */
+    margin: 1rem 0; /* Margin atas dan bawah untuk pemisahan */
+  }
+
+  .aboutus-teks .heading {
+    font-size: 4rem; /* Ukuran heading di aboutus */
+  }
+
+  /* Footer atau elemen lain */
+  .footer h1 {
+    font-size: 2rem; /* Ukuran font footer */
+  }
+
+  .footer-content ul {
+    padding-left: 0; /* Menghapus padding kiri */
+  }
+}
+
+@media (max-width: 771px) {
+  .image-data h2 {
+    font-size: 30px;
+    white-space: normal; /* Allow text to wrap */
+  }
+  .timeline-section .heading {
+    font-size: 3rem; /* Ukuran font heading untuk layar kecil */
+    margin-bottom: 2rem;
+  }
+  .image-data h2 {
+    font-size: 30px; /* Ukuran font untuk sub-heading */
+  }
+
+  .nav-btn {
+    visibility: hidden; /* Menyembunyikan tombol navigasi */
+  }
+
+  .swiper-pagination-bullet {
+    visibility: visible; /* Menampilkan bullet */
+  }
+
+  .timeline-items::before {
+    content: "";
+    left: 7px; /* Posisi horizontal garis */
+    height: calc(100% - 17rem); /* Mengatur tinggi garis agar berhenti di dot */
+  }
+
+  /* Footer atau elemen lain */
+  .footer h1 {
+    font-size: 2rem; /* Ukuran font footer */
+  }
+
+  .footer-content ul {
+    padding-left: 0; /* Menghapus padding kiri */
+  }
+
+  .footer {
+    flex-direction: column; /* Atur footer menjadi kolom */
+    align-items: center; /* Pusatkan isi footer */
+    text-align: center; /* Teks dalam footer di tengah */
+  }
+
+}
+
+@media (max-width: 551px) {
+  .image-data h2 {
+    font-size: 25px;
+  }
+  .timeline-items::before {
+    content: "";
+    left: 7px; /* Posisi horizontal garis */
+    height: calc(100% - 18rem); /* Mengatur tinggi garis agar berhenti di dot */
+  }
+
+  .aboutus-teks .heading {
+    font-size: 2.5rem; /* Ukuran heading di aboutus */
+  }
+
+  .aboutus-images {
+    flex-direction: row; /* Mengatur gambar menjadi kolom */
+    align-items: center; /* Pusatkan gambar */
+    width: 100%; /* Lebar penuh untuk gambar */
+    height: auto; /* Tinggi otomatis */
+  }
+
+  .papuma-img {
+    width: 100%; /* Gambar utama menggunakan lebar penuh */
+    height: auto; /* Sesuaikan tinggi otomatis */
+  }
+
+  .jfc-left,
+  .jfc-right {
+    position: static; /* Ubah posisi menjadi statis untuk responsivitas */
+    width: 49%; /* Lebar penuh untuk gambar tambahan */
+    margin-top: 1rem; /* Margin atas untuk pemisahan antar gambar */
+  }
+
+  .footer h1 {
+    font-size: 2rem; /* Ukuran font footer untuk layar kecil */
+  }
+
+  .footer {
+    flex-direction: column; /* Atur footer menjadi kolom */
+    align-items: center; /* Pusatkan isi footer */
+    text-align: center; /* Teks dalam footer di tengah */
+  }
+}
+
+@media (max-width: 371px) {
+  .image-data h2 {
+    font-size: 20px;
+  }
+  .timeline-senction .heading {
+    font-size: 2.5rem; /* Ukuran font heading lebih kecil untuk layar kecil */
+    margin-bottom: 3rem;
+  }
+
+  .timeline-items::before {
+    content: "";
+    left: 7px; /* Posisi horizontal garis */
+    height: calc(100% - 23rem); /* Mengatur tinggi garis agar berhenti di dot */
+  }
+
+  .aboutus-teks .heading {
+    font-size: 2.5rem; /* Ukuran heading di aboutus */
+  }
+
+  .aboutus-images {
+    flex-direction: row; /* Mengatur gambar menjadi kolom */
+    align-items: center; /* Pusatkan gambar */
+    width: 100%; /* Lebar penuh untuk gambar */
+    height: auto; /* Tinggi otomatis */
+  }
+
+  .papuma-img {
+    width: 100%; /* Gambar utama menggunakan lebar penuh */
+    height: auto; /* Sesuaikan tinggi otomatis */
+  }
+
+  .jfc-left,
+  .jfc-right {
+    position: static; /* Ubah posisi menjadi statis untuk responsivitas */
+    width: 49%; /* Lebar penuh untuk gambar tambahan */
+    margin-top: 1rem; /* Margin atas untuk pemisahan antar gambar */
+  }
+
+  .footer {
+    flex-direction: column; /* Atur footer menjadi kolom */
+    align-items: center; /* Pusatkan isi footer */
+    text-align: center; /* Teks dalam footer di tengah */
+  }
+}

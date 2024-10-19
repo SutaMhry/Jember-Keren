@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: black;
+}
+
+/* Navbar */
+nav {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+nav p {
+    font-family: "Kaushan Script", cursive;
+    list-style: none;
+    color: white;
+    font-size: 2rem;
+    margin: 0;
+}
+
+nav .top-btn {
+    height: auto;
+    color: white;
+    background-color: transparent;
+    border: none;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+}
+
+nav .top-btn i {
+    display: flex;
+    align-items: center;
+}
+
+nav p:nth-of-type(1) {
+    flex-grow: 1;
+    text-align: center;
+}
+
+nav p:nth-of-type(2) {
+    margin-left: auto;
+}
+
+img {
+    width: 100%;
+}
+
+.teks {
+    color: white;
+    margin: 2rem;
+}
+
+.teks h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* Rata tengah secara horizontal */
+    font-size: 2.5rem;
+    /* Ukuran default */
+    margin: 2rem auto;
+    /* Agar elemen h1 tetap di tengah */
+}
+
+
+.teks p {
+    margin: 2rem;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+}
+
+.teks h6 {
+    margin: 2rem;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+}
+
+.teks h6 a {
+    margin-left: 8px;
+}
+
+.terkait {
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.terkait img {
+    max-width: 250px;
+    /* Lebar maksimum */
+    max-height: 250px;
+    /* Tinggi maksimum */
+    width: auto;
+    /* Menyesuaikan secara proporsional */
+    height: auto;
+    /* Menyesuaikan secara proporsional */
+}
+
+.teks .teks-terkait {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+
+@media (max-width: 1100px) {
+    nav p {
+        font-size: 1.8rem;
+    }
+
+    .teks h1 {
+        font-size: 2.2rem;
+        text-align: center;
+        /* Agar teks tetap di tengah */
+    }
+
+    .terkait img {
+        max-width: 220px;
+        max-height: 220px;
+    }
+}
+
+
+@media (max-width: 901px) {
+    nav p {
+        font-size: 1.6rem;
+    }
+
+    .teks h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .terkait img {
+        max-width: 200px;
+        max-height: 200px;
+    }
+}
+
+@media (max-width: 771px) {
+    nav p {
+        font-size: 1.5rem;
+    }
+
+    .teks h1 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .terkait img {
+        max-width: 160px;
+        max-height: 160px;
+    }
+}
+
+
+@media (max-width: 551px) {
+    nav p {
+        font-size: 1.4rem;
+    }
+
+    .teks h1 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .terkait {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .terkait img {
+        max-width: 320px;
+        max-height: 320px;
+    }
+}
+
+
+@media (max-width: 371px) {
+    .content .teks {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .teks h1 {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    .teks-terkait {
+        font-size: 1.2rem;
+    }
+
+    .terkait {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .terkait img {
+        max-width: 280px;
+        max-height: 280px;
+    }
+}
